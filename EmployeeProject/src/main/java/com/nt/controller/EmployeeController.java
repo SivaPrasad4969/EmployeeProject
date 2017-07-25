@@ -43,4 +43,9 @@ public @ResponseBody void deleteEmployee(@PathVariable("id") int id) {
 		employeeService.deleteEmp(id);
 		
 }
+@RequestMapping(value = "delete/{id}", method = RequestMethod.DELETE)
+public @ResponseBody void deleteEmployee1(@PathVariable("id") int id) {
+		employeeService.deleteEmp(id);
+		
+}
 }
