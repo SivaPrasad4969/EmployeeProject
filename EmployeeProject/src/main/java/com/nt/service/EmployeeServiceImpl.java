@@ -23,4 +23,10 @@ EmployeeDAO employeeDAO;
 		return employeeDAO.getEmployee();
 	}
 
+	@Override
+	public boolean deleteEmp(int id) {
+		// TODO Auto-generated method stub
+		return employeeDAO.deleteEmp(id);
+	}
+
 }

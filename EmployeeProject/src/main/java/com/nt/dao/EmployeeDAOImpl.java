@@ -38,7 +38,12 @@ Transaction tx=null;
 
 	@Override
 	public boolean deleteEmp(int id) {
-		// TODO Auto-generated method stub
+		session = factory.openSession();
+		Object o = session.load(Employee.class, id);
+		tx = session.getTransaction();
+		session.beginTransaction();
+		session.delete(o);
+		tx.commit();
 		return false;
 	}
 }
