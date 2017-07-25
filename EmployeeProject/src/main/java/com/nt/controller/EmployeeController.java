@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -36,5 +37,10 @@ List<Employee> getEmployee() {
 	}
 
 	return employeeList;
+}
+@RequestMapping(value = "delete/{id}", method = RequestMethod.DELETE)
+public @ResponseBody void deleteEmployee(@PathVariable("id") int id) {
+		employeeService.deleteEmp(id);
+		
 }
 }
