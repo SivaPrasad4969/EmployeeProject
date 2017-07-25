@@ -34,4 +34,11 @@ Transaction tx=null;
       session.close();
 		return list;
 	}
+
+
+	@Override
+	public boolean deleteEmp(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
